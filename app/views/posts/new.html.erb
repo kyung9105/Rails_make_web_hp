@@ -1,0 +1,11 @@
+<%= form_for(@post) do |f| %>
+
+  글 제목
+  <%= f.text_field :title %><br>
+
+  내용
+  <%= f.text_field :content %><br>
+
+  <%= f.submit %>
+<% end %>
+

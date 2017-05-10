@@ -1,0 +1,9 @@
+
+<h1> 전체 게시판 내용입니다!!</h2>
+<% @post.each do |post| %>
+<div class='well'>
+    제목 : <%= post.title %> <br>
+    내용 : <%= post.content %> <br>
+    <%= link_to "보기", post_path %> | <%= link_to "수정", edit_post_path(post) %> | <a href="/destroy/<%= post.id %>"> 삭제</a>
+</div>    
+<% end %>
