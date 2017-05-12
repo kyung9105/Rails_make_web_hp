@@ -1,0 +1,12 @@
+<h1> 공지사항 </h1>  
+<h3> <%= link_to "Home", root_path %> | <%= link_to "건의함", suggestions_path %></h3>
+<h2><%= link_to "글쓰기", new_announce_path %> </h2>
+
+
+<% @announce.each do |announce| %>
+<div class='well'>
+    제목 : <%= announce.title %> <br>
+    내용 : <%= announce.content %> <br>
+    <%= link_to "보기", announce_path(announce) %> | <%= link_to "수정", edit_announce_path(announce) %> | <%= link_to "삭제",  destroy_announce_path(announce) %>
+</div>    
+<% end %>

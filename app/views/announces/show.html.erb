@@ -1,0 +1,9 @@
+
+<h1> 전체 공지사항 내용입니다!!</h2>
+<% @announce.each do |announce| %>
+<div class='well'>
+    제목 : <%= announce.title %> <br>
+    내용 : <%= announce.content %> <br>
+    <%= link_to "보기", announce_path(announce) %> | <%= link_to "수정", edit_announce_path(announce) %> | <%= link_to "삭제", destroy_announce_path(announce) %>
+</div>    
+<% end %>

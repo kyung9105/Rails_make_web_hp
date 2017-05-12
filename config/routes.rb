@@ -4,10 +4,12 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   resources :posts
+  resources :suggestions
+  resources :announces
   root 'posts#index'
-  get '/destroy/:id' => 'posts#destroy'
-
-
+  get '/destroy/:id'=> 'posts#destroy'
+  get '/s_destroy/:id' , to: 'suggestions#destroy', as: 'destroy_suggestion'
+  get '/a_destroy/:id' , to: 'announces#destroy', as: 'destroy_announce'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

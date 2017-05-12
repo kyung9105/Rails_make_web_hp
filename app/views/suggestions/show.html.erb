@@ -1,0 +1,9 @@
+
+<h1> 전체 건의함 내용입니다!!</h2>
+<% @suggestion.each do |suggestion| %>
+<div class='well'>
+    제목 : <%= suggestion.title %> <br>
+    내용 : <%= suggestion.content %> <br>
+    <%= link_to "보기", suggestion_path(suggestion) %> | <%= link_to "수정", edit_suggestion_path(suggestion) %> | <%= link_to "삭제", destroy_suggestion_path(suggestion) %>
+</div>    
+<% end %>

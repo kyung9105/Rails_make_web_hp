@@ -1,0 +1,12 @@
+<h1> 건의함 </h1>  
+<h3> <%= link_to "Home", root_path %> | <%= link_to "공지사항", announces_path %> </h3>
+<h2><%= link_to "글쓰기", new_suggestion_path %> </h2>
+
+
+<% @suggestion.each do |suggestion| %>
+<div class='well'>
+    제목 : <%= suggestion.title %> <br>
+    내용 : <%= suggestion.content %> <br>
+    <%= link_to "보기", suggestion_path(suggestion) %> | <%= link_to "수정", edit_suggestion_path(suggestion) %> | <%= link_to "삭제", destroy_suggestion_path(suggestion) %>
+</div>    
+<% end %>

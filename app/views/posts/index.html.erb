@@ -1,4 +1,5 @@
-<h1><%= link_to "글쓰기", new_post_path %></h1>
+<h1> 자유게시판 | <%= link_to "건의함", suggestions_path %> | <%= link_to "공지사항", announces_path %></h1>
+<h2><%= link_to "글쓰기", new_post_path %></h2>
 
 
 <% @post.each do |post| %>

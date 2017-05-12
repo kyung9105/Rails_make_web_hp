@@ -1,0 +1,10 @@
+<%= form_for(@announce) do |f| %>
+
+  공지 제목
+  <%= f.text_field :title %><br />
+
+  공지 내용
+  <%= f.text_field :content %><br />
+
+  <%= f.submit %>
+<% end %>

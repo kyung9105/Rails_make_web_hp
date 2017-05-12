@@ -1,0 +1,10 @@
+<%= form_for(@suggestion) do |f| %>
+
+  건의 제목
+  <%= f.text_field :title %><br />
+
+  건의 내용
+  <%= f.text_field :content %><br />
+
+  <%= f.submit %>
+<% end %>
